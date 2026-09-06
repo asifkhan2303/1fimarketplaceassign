@@ -85,9 +85,3 @@ Open `http://localhost:5173/shop` — the Shop page loads on the "Top Brands" ta
 
 - **Real:** the full data flow — MongoDB → Express → REST API → React UI — for every screen in the Marketplace flow.
 - **Mocked:** the underlying mutual-fund-backed underwriting/loan approval that a real "Proceed with this plan" tap would kick off. `POST /api/orders` records the selected plan as a lightweight `Order` document; wiring it to 1Fi's actual lending backend is out of scope for this assignment.
-
-## Notable UX choices
-
-- The hero banner and pill-shaped tab switcher mirror the reference screenshot (gradient purple hero, rounded search bar, card-based lists, bottom nav) so the new section doesn't feel bolted on.
-- EMI plans are framed as "no interest, no credit score check — backed by your mutual fund holdings," consistent with the marketing copy on 1Fi's existing Shop banner.
-- Variant selection defaults to the first option per group on page load, so an EMI plan is visible immediately rather than waiting for the user to make every choice first.
