@@ -1,0 +1,16 @@
+.shop-tabs {
+  display: flex;
+  gap: 8px;
+  background: var(--color-primary-light);
+  border-radius: var(--radius-pill);
+  padding: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin: -28px clamp(16px, 5vw, 28px) 0; /* pulls the tab bar up to overlap the hero, as in the reference screen */
+  position: relative;
+  z-index: 5;
+}
+
+.shop-tabs::-webkit-scrollbar {
+  display: none;
+}

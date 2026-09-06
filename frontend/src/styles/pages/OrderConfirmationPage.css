@@ -1,0 +1,71 @@
+.order-confirmation {
+  max-width: var(--shell-max-width);
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 60px 16px 24px;
+}
+
+@media (min-width: 640px) {
+  .order-confirmation {
+    padding: 72px 24px 24px;
+  }
+}
+
+.order-confirmation__icon {
+  font-size: 44px;
+}
+
+.order-confirmation__title {
+  margin: 10px 0 4px;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.order-confirmation__subtitle {
+  margin: 0 0 24px;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+}
+
+.order-confirmation__card {
+  width: 100%;
+  max-width: 400px;
+  background: var(--color-white);
+  border-radius: var(--radius-card);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: var(--shadow-card);
+}
+
+.order-confirmation__row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.order-confirmation__row span:first-child {
+  color: var(--color-text-secondary);
+}
+
+.order-confirmation__row span:last-child {
+  font-weight: 700;
+}
+
+.order-confirmation__button {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 400px;
+  border: none;
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 14px;
+  padding: 14px;
+  border-radius: var(--radius-pill);
+}

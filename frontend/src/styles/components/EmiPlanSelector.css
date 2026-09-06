@@ -1,0 +1,83 @@
+.emi-plan-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.emi-plan-selector__empty {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.emi-plan-selector__card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  text-align: left;
+}
+
+.emi-plan-selector__card--active {
+  border-color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+.emi-plan-selector__radio {
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emi-plan-selector__card--active .emi-plan-selector__radio {
+  border-color: var(--color-primary);
+}
+
+.emi-plan-selector__radio-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-primary);
+}
+
+.emi-plan-selector__details {
+  flex: 1;
+}
+
+.emi-plan-selector__tenure {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.emi-plan-selector__meta {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.emi-plan-selector__amount {
+  text-align: right;
+}
+
+.emi-plan-selector__monthly {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.emi-plan-selector__per-month {
+  margin: 2px 0 0;
+  font-size: 11px;
+  color: var(--color-text-secondary);
+}

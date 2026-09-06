@@ -1,0 +1,11 @@
+.category-chips {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-bottom: 2px;
+}
+
+.category-chips::-webkit-scrollbar {
+  display: none;
+}

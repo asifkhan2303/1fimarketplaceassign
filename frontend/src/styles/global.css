@@ -1,0 +1,114 @@
+:root {
+  /* Colors - matched to the existing Shop page (purple hero, violet accents) */
+  --color-primary: #5b2eff;
+  --color-primary-dark: #2c0f8a;
+  --color-primary-light: #ede9ff;
+  --color-bg: #f5f5f8;
+  --color-white: #ffffff;
+  --color-text: #16162a;
+  --color-text-secondary: #6b7280;
+  --color-border: #ecebf2;
+  --color-success: #1a9e5c;
+
+  /* Radii - the app uses fully rounded pills for tabs/search and large
+     rounded corners for cards */
+  --radius-pill: 999px;
+  --radius-card: 20px;
+  --radius-sm: 12px;
+
+  --shadow-card: 0 2px 12px rgba(22, 22, 42, 0.06);
+  --shadow-elevated: 0 8px 24px rgba(44, 15, 138, 0.18);
+
+  --font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* Every fixed-width screen (app-shell, product detail, confirmation,
+     bottom nav, CTA bars) reads this single variable instead of a
+     hardcoded 480px, so widening the app for larger screens is a
+     one-place change. Mobile-first: narrow by default, then widens
+     at the breakpoints below. */
+  --shell-max-width: 480px;
+}
+
+/* Small tablets / large phones in landscape */
+@media (min-width: 640px) {
+  :root {
+    --shell-max-width: 600px;
+  }
+}
+
+/* Tablets and small desktop windows */
+@media (min-width: 1024px) {
+  :root {
+    --shell-max-width: 720px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.app-shell {
+  max-width: var(--shell-max-width);
+  margin: 0 auto;
+  min-height: 100vh;
+  background: var(--color-bg);
+  position: relative;
+  padding-bottom: 84px; /* space for the fixed bottom nav */
+}
+
+/* On wider viewports the shell itself grows (see --shell-max-width),
+   but on very wide desktop windows a 720px-wide app still sits with
+   nothing around it, so give it a subtle frame instead of bleeding
+   into the browser chrome. */
+@media (min-width: 1024px) {
+  body {
+    background: #e9e8f0;
+  }
+
+  .app-shell {
+    margin: 24px auto;
+    min-height: calc(100vh - 48px);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(22, 22, 42, 0.12);
+  }
+}
+
+.screen-padding {
+  padding: 16px;
+}
+
+@media (min-width: 640px) {
+  .screen-padding {
+    padding: 20px 24px;
+  }
+}

@@ -1,0 +1,30 @@
+.marketplace-home__chips {
+  margin-top: 14px;
+}
+
+.marketplace-home__heading {
+  margin: 18px 0 12px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.marketplace-home__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+/* Once there's room for it, let cards sit side by side instead of a
+   single narrow column stretching the full shell width. */
+@media (min-width: 480px) {
+  .marketplace-home__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .marketplace-home__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
